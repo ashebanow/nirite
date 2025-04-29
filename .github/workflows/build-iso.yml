@@ -29,8 +29,6 @@ on:
       - './iso.toml'
       - './.github/workflows/build-iso.yml'
       - './Justfile'
-    paths-ignore:
-      - '**/README.md'
 
 env:
   IMAGE_REGISTRY: "ghcr.io/${{ github.repository }}"
