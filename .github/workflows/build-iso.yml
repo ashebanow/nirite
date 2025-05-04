@@ -15,8 +15,8 @@ on:
         options:
           - amd64
           - arm64
-  schedule:
-    - cron: '45 10 * * *'  # 10:45am UTC everyday, well after the build.yml workflow
+  # schedule:
+  #   - cron: '45 10 * * *'  # 10:45am UTC everyday, well after the build.yml workflow
   pull_request:
     branches:
       - main
@@ -55,7 +55,7 @@ jobs:
       - name: lower case the image registry in case of any capitalization
         run: |
           echo "IMAGE_REGISTRY=${IMAGE_REGISTRY,,}" >> ${GITHUB_ENV}
-      
+
       - name: Install dependencies
         if: inputs.platform == 'arm64'
         run: |

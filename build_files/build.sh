@@ -15,10 +15,10 @@ RELEASE="$(rpm -E %fedora)"
 dnf5 -y copr enable yalter/niri
 dnf5 -y copr enable lihaohong/chezmoi
 dnf5 -y copr enable ulysg/xwayland-satellite
-# dnf5 -y copr enable solopasha/hyprland
+dnf5 -y copr enable solopasha/hyprland
 # dnf5 -y copr enable tofik/sway
 # dnf5 -y copr enable pgdev/ghostty
-# dnf5 -y copr enable heus-sueh/packages                    # for matugen/swww
+dnf5 -y copr enable heus-sueh/packages                    # for matugen/swww
 
 #######################################################################
 ## Install Packages
@@ -29,14 +29,14 @@ dnf5 -y copr enable ulysg/xwayland-satellite
 #
 # These non-nerd fonts are also preinstalled:
 #
+# * adobe-source-code-pro-fonts
+# * google-noto-color-emoji-fonts
+# * google-droid-sans-fonts
 # * google-noto-sans-cjk-fonts
 # * fira-code-fonts
 FONTS=(
-  adobe-source-code-pro-fonts
   fontawesome-fonts-all
-  google-noto-color-emoji-fonts
   google-noto-emoji-fonts
-  google-droid-sans-fonts
   jetbrains-mono-fonts
 )
 
@@ -136,11 +136,11 @@ dnf5 install -y \
 dnf5 -y copr disable yalter/niri
 dnf5 -y copr disable lihaohong/chezmoi
 dnf5 -y copr disable ulysg/xwayland-satellite
-# dnf5 -y copr disable solopasha/hyprland
+dnf5 -y copr disable solopasha/hyprland
 # dnf5 -y copr disable erikreider/SwayNotificationCenter
 # dnf5 -y copr disable tofik/sway
 # dnf5 -y copr disable pgdev/ghostty
-# dnf5 -y copr disable heus-sueh/packages
+dnf5 -y copr disable heus-sueh/packages
 
 #######################################################################
 ### Enable Services
